@@ -1,0 +1,65 @@
+.needs{
+	padding-top: 160px;
+}
+
+.allNeedsFull{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.allNeeds{
+width: 50%;
+ text-align: center;
+ padding-top: 34px;
+}
+
+.needs-text{
+font-size: 16px;
+margin-top: 50px;
+line-height: 1.5em;
+margin-bottom: 80px;
+}
+
+.allNeeds-card{
+background: url('../img/card.png') no-repeat top;
+}
+
+.allNeeds-afterGetting{
+	background: url('../img/parcel.png') no-repeat top;
+}
+
+.afterTitle{
+	margin-top: 80px;
+	text-align: center;
+}
+
+ .wrapper ul{
+    list-style-image:url('../img/del.png');
+    line-height: 2.8em;
+    margin-top: 0px;
+    }
+
+.waysOfDelivery{
+	width: 300px;
+}
+
+.how p{
+	margin-top: 10px;
+	line-height: 1.7em;
+	text-indent: 25px;
+	text-align: justify;
+}
+
+.title-how{
+	margin-bottom: 80px;
+}
+
+.p-last{
+	margin-bottom: 60px;
+}
+
+.how{
+	padding-bottom: 80px;
+}
+
+

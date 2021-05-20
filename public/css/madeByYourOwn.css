@@ -1,0 +1,74 @@
+.make{
+	padding-top: 160px;
+	padding-bottom: 80px;
+}
+
+.offer{
+	width: 100%;
+}
+.offer-title{
+line-height: 1.7em;
+}
+
+.idea{
+	font-size: 38px;
+}
+
+.offer-text-intro, .requirments-text{
+padding-top: 40px;
+line-height: 1.7em;
+}
+
+.offer-text-ending{
+	padding-bottom: 40px;
+}
+
+.imf{
+	margin-left: 50px;
+}
+
+.requirments-text{
+	padding-bottom: 40px;
+	}
+
+.exampls{
+	padding-bottom: 80px;
+}
+
+.rt2{
+	padding-bottom: 60px;
+}
+
+img[tabindex="0"] {
+  cursor: zoom-in;
+}
+img[tabindex="0"]:focus {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  max-width: 99%;
+  max-height: 99%;
+  margin: auto;
+  box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(210,210,210,.4);
+}
+img[tabindex="0"]:focus,  /* убрать строку, если не нужно, чтобы при клике на увеличенное фото, оно возвращалось в исходное состояние */
+img[tabindex="0"]:focus ~ * {
+  pointer-events: none;
+  cursor: zoom-out;
+}
+
+.wrapper-example img{
+	border-radius: 50%;
+}
+
+
+@media screen and (max-width: 992px){	
+.wrapper-example img{
+	max-width: 30%;
+	}
+}
