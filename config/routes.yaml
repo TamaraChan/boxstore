@@ -6,4 +6,6 @@ boxes:
     path: /boxes
     controller: App\Controller\Boxes::index
 
-
+madeByYourOwn:
+    path: /madeByYourOwn
+    controller: App\Controller\MadeByYourOwn::index

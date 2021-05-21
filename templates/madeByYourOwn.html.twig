@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="css/madeByYourOwn.css">
+{% endblock %}
+{% block content %}
+	<section class="make">
+		<div class="container">
+			<div class="offer">
+				<div class="introduction">
+					<h1 class="offer-title">
+						Мы всегда рады помочь Вам с реализацией <br>
+						<span class="idea">собственных идей!</span>
+					</h1>
+					<div class="wrapper wrap-own">
+						<div class="off">
+							<p class="offer-text-intro">
+								С нами Вы можете:
+							</p>
+							<ul>
+								<li>выбрать компоненты для уникального боксика;</li>
+								<li>указать желаемую сумму к оплате;</li>
+								<li>посоветоваться: на что лучше обратить внимание, какие компоненты добавить/убрать и т.п</li>
+							</ul>
+							<p class="offer-text-ending">
+								По итогу мы подготовим идеальный подарочек, учитывая все Ваши пожеланиями !
+							</p>
+						</div>
+						<img class="imf" src="img/gift.png" alt="img/gift.png">
+					</div>
+				</div>
+				<div class="requirments">
+					<h1 class="requirment-title">
+						Что нужно для оформления личного бокса?</h1>
+					<p class="requirments-text">
+						Просто оставьте свою заявку, указав в комментариях желаемую цену и приблизительный список содержимого и ожидайте звонка нашего менеджера: мы обязательно с Вами свяжемся!
+					</p>
+				</div>
+				<div class="wrapper">
+					<a href="orderForm" class="btn" id="btn btn-offer">Оформить уникальный бокс</a>
+					<a href="boxes" class="btn" id="btn btn-offer">Перейти к готовым боксам</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="exampls">
+		<div class="container">
+			<h1 class="requirment-title rt2">
+				Примеры подарков, собранных по пожеланиям наших клиентов</h1>
+			<div class="wrapper wrapper-example">
+				<img src="img/1example.png" alt="" tabindex="0"/>
+				<img src="img/3example.png" alt="" tabindex="0"/>
+				<img src="img/2example.png" alt="" tabindex="0"/>
+				<img src="img/4example.png" alt="" tabindex="0"/>
+			</div>
+		</div>
+	</section>
+{% endblock %}
