@@ -1,3 +1,9 @@
 index:
     path: /
     controller: App\Controller\Index::index
+
+boxes:
+    path: /boxes
+    controller: App\Controller\Boxes::index
+
+
