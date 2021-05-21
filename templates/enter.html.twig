@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+{% endblock %}
+{% block content %}
+	<section class="orderingForm">
+		<div class="container">
+			<h1>Вход в личный кабинет</h1>
+			<p>*Для зарегистрированных пользователей скидка -10% к каждому из заказов!</p>
+			<a href="registration.html" class="btn">Перейти к регистрации</a><p></p>
+			<form action="#" class="form">
+				<input type="login" placeholder="Логин" name="login" class="input" required>
+				<input type="password" placeholder="Пароль" name="password" class="input" required>
+				<button class="btn btn-form btn-enter">Войти</button><p></p>
+			</form>
+		</div>
+	</section>
+{% endblock %}

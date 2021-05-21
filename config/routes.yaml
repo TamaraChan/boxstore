@@ -16,3 +16,7 @@ orderBox:
     requirements:
         idBox: '\d+'
 
+enter:
+    path: /enter
+    controller: App\Controller\Enter::index
+
