@@ -9,30 +9,30 @@
 		<ul>
 			<li class="nav-item item1">
 				<div class="menu-wrapper">
-					<img src="img/forMenuChtoZnat.png" alt="" class="menu-img1">
+					<img src="{{ asset('img/forMenuChtoZnat.png') }}" alt="" class="menu-img1">
 					<a href="needs.html">Что нужно знать для оформления заказа</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown item2">
 				<div class="menu-wrapper">
-					<img src="img/forMenuCatalog.png" alt="" class="menu-img2">
+					<img src="{{ asset('img/forMenuCatalog.png') }}" alt="" class="menu-img2">
 					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">Каталог товаров</a>
 					<ul class="dropdown-menu" aria-labelledby = "navbarDropdownCategories">
 						<li>
-							<a href="boxes" class="dropdown-item">Готовые боксы</a>
+							<a href="{{ path('boxes') }}" class="dropdown-item">Готовые боксы</a>
 						</li>
-						<li><a href="madeByYourOwn" class="dropdown-item">Собери сам</a></li>
+						<li><a href="{{ path('madeByYourOwn') }}" class="dropdown-item">Собери сам</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item item3">
 				<div class="menu-wrapper">
-					<img src="img/forMenuEnter.png" alt="" class="menu-img3">
+					<img src="{{ asset('img/forMenuEnter.png') }}" alt="" class="menu-img3">
 					<a href="enter.html">Войти/Зарегестрироваться</a></li>
 	</div>
 	</ul>
 	</div>
 	<div class="container header-container">
-		<a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
+		<a href="{{ path('index') }}"><img src="{{ asset('img/logo.png') }}" alt="logo" class="logo"></a>
 	</div>
 </header>

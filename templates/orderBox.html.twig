@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+{% endblock %}
+{% block content %}
+	<section class="orderingForm">
+		<div class="container">
+			<h1>Оформление заказа</h1>
+			<p>* Через некоторое время после отправления заявки с Вами свяжется наш менеджер</p>
+			<form action="#" class="form">
+				<input type="hidden" name="idBox" value="{{ idBox }}">
+				<input type="name" placeholder="Имя" name="name" class="input" required>
+				<input type="email" placeholder="E-mail" name="email" class="input" required>
+				<input type="phone" placeholder="Телефон" name="phone" class="input" required>
+				<input type="address" placeholder="Адрес" name="address" class="input">
+				<input type="place" placeholder="Комментарий" name="comment" class="input">
+				<button class="btn btn-form">Отправить заявку</button>
+			</form>
+		</div>
+	</section>
+{% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
 	{{ parent() }}
-	<link rel="stylesheet" href="css/boxes.css">
+	<link rel="stylesheet" href="{{ asset('css/boxes.css') }}">
 {% endblock %}
 {% block content %}
 	<section class="listings">
@@ -9,7 +9,7 @@
 			<h1 class="boxesFullList-title">Здесь Вы можете выбрать готовый подарок</h1>
 			<ul class="properties_list">
 				<li>
-					<img src="img/1box.png" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/1box.png') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴340</span>
 					<div class="property_details">
 						<h3>Бокс "Sparkle"</h3>
@@ -22,11 +22,11 @@
 							◦ Raffaello (x6)<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-1" id="1">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:2}) }}" class="btn btn-1">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/third.JPG" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/third.JPG') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴260</span>
 					<div class="property_details">
 						<h3>Бокс "Nutella"</h3>
@@ -39,11 +39,11 @@
 							◦ Lion (x3)<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-2" id="2">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:3}) }}" class="btn btn-2">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/3box.png" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/3box.png') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴500</span>
 					<div class="property_details">
 						<h3>Бокс "Man classic"</h3>
@@ -58,11 +58,11 @@
 							◦ шоколад Ritter Sport<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-3" id="3">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:4}) }}" class="btn btn-3">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/second.JPG" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/second.JPG') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴300</span>
 					<div class="property_details">
 						<h3>Бокс "Blue Mode"</h3>
@@ -77,11 +77,11 @@
 							◦ MilkyWay (x2)<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-4" id="4">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:5}) }}" class="btn btn-4">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/fourth.JPG" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/fourth.JPG') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴380</span>
 					<div class="property_details">
 						<h3>Бокс "Jar"</h3>
@@ -95,11 +95,11 @@
 							◦ светодиодная гирлянда<br>
 							◦ коробочка с наполнителем и баночками (х4)
 						</details>
-						<a href="orderForm.html" class="btn btn-5" id="5">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:6}) }}" class="btn btn-5">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/6.JPG" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/6.JPG') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴320</span>
 					<div class="property_details">
 						<h3>Бокс "Pinky"</h3>
@@ -113,11 +113,11 @@
 							◦ Kinder (x4)<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-6" id="6">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:7}) }}" class="btn btn-6">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/7.JPG" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/7.JPG') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴230</span>
 					<div class="property_details">
 						<h3>Бокс "Care mania"</h3>
@@ -130,11 +130,11 @@
 							◦ Kinder (x4)<br>
 							◦ коробочка с наполнителем и бантиком
 						</details>
-						<a href="orderForm.html" class="btn btn-7" id="7">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:8}) }}" class="btn btn-7">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/4example.png" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/4example.png') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴380</span>
 					<div class="property_details">
 						<h3>Бокс "For man 2.0"</h3>
@@ -148,11 +148,11 @@
 							◦ Ferrero Rocher (x3)<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-8" id="8">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:9}) }}" class="btn btn-8">Купить сейчас</a>
 					</div>
 				</li>
 				<li>
-					<img src="img/1example.png" alt="" title="" class="property_img"/>
+					<img src="{{ asset('img/1example.png') }}" alt="" title="" class="property_img"/>
 					<span class="price">₴300</span>
 					<div class="property_details">
 						<h3>Бокс "In Love"</h3>
@@ -166,11 +166,11 @@
 							◦ светодиодная гирляндочка<br>
 							◦ коробочка с наполнителем
 						</details>
-						<a href="orderForm.html" class="btn btn-9" id="9">Купить сейчас</a>
+						<a href="{{ path('orderBox', {idBox:10}) }}" class="btn btn-9">Купить сейчас</a>
 					</div>
 				</li>
 			</ul>
-			<a href="madeByYourOwn.html" class="btn">Собрать уникальный бокс</a>
+			<a href="{{ path('madeByYourOwn') }}" class="btn">Собрать уникальный бокс</a>
 		</div>
 	</section>
 {% endblock %}

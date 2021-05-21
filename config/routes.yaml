@@ -9,3 +9,10 @@ boxes:
 madeByYourOwn:
     path: /madeByYourOwn
     controller: App\Controller\MadeByYourOwn::index
+
+orderBox:
+    path: /orderBox/{idBox}
+    controller: App\Controller\OrderBox::index
+    requirements:
+        idBox: '\d+'
+
