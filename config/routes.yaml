@@ -20,3 +20,7 @@ enter:
     path: /enter
     controller: App\Controller\Enter::index
 
+registration:
+    path: /registration
+    controller: App\Controller\Registration::index
+

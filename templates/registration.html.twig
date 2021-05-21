@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+{% endblock %}
+{% block content %}
+	<section class="orderingForm">
+		<div class="container">
+			<h1>Регистрация</h1>
+			<p>*Для зарегистрированных пользователей скидка -10% к каждому из заказов!</p>
+
+			<input type="login" placeholder="Логин" name="login" class="input" required>
+			<input type="password" placeholder="Пароль" name="password" class="input" required>
+			<input type="name" placeholder="Имя" name="name" class="input" required>
+			<input type="email" placeholder="E-mail" name="email" class="input">
+			<input type="phone" placeholder="Телефон" name="phone" class="input">
+			<input type="address" placeholder="Адрес" name="address" class="input">
+			<button class="btn btn-form btn-enter">Сохранить и войти</button>
+			</form>
+		</div>
+	</section>
+{% endblock %}
