@@ -18,7 +18,13 @@ orderBox:
 
 enter:
     path: /enter
+    methods: GET
     controller: App\Controller\Enter::index
+
+authUser:
+    path: /enter
+    methods: POST
+    controller: App\Controller\Enter::authUser
 
 registration:
     path: /registration

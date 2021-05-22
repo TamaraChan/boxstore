@@ -8,8 +8,15 @@
 		<div class="container">
 			<h1>Вход в личный кабинет</h1>
 			<p>*Для зарегистрированных пользователей скидка -10% к каждому из заказов!</p>
+			<div>
+				{% if errors is defined %}
+					{% for error in errors %}
+						<div class="alert alert-danger">{{ error }}</div>
+					{% endfor %}
+				{% endif %}
+			</div>
 			<a href="{{ path('registration') }}" class="btn">Перейти к регистрации</a><p></p>
-			<form action="#" class="form">
+			<form action="{{ path('authUser') }}" class="form" method="POST">
 				<input type="login" placeholder="Логин" name="login" class="input" required>
 				<input type="password" placeholder="Пароль" name="password" class="input" required>
 				<button class="btn btn-form btn-enter">Войти</button><p></p>
