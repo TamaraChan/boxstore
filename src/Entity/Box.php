@@ -17,7 +17,7 @@ class Box
      *
      * @ORM\Id
      * @ORM\Column(name="id_box", type="integer")
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $idBox;
 

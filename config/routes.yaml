@@ -22,5 +22,11 @@ enter:
 
 registration:
     path: /registration
+    methods: GET
     controller: App\Controller\Registration::index
+
+create_user:
+    path: /registration
+    methods: POST
+    controller: App\Controller\Registration::createUser
 

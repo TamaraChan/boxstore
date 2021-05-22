@@ -16,7 +16,7 @@ class Employee
      *
      * @ORM\Id
      * @ORM\Column(name="id_employee", type="integer")
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $idEmployee;
 

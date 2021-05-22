@@ -16,7 +16,7 @@ class Order
      *
      * @ORM\Id
      * @ORM\Column(name="id_order", type="integer")
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $idOrder;
 

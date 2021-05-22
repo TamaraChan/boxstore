@@ -4,6 +4,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
@@ -16,7 +17,7 @@ class User
      *
      * @ORM\Id
      * @ORM\Column(name="id_user", type="integer")
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $idUser;
 
@@ -58,9 +59,9 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="tel", type="string")
+     * @ORM\Column(name="phone", type="string")
      */
-    protected $tel;
+    protected $phone;
 
     /**
      * @var string
@@ -134,18 +135,18 @@ class User
     /**
      * @return string
      */
-    public function getTel()
+    public function getPhone()
     {
-        return $this->tel;
+        return $this->phone;
     }
 
     /**
-     * @param string $tel
+     * @param string $phone
      * @return User
      */
-    public function setTel($tel)
+    public function setPhone($phone)
     {
-        $this->tel = $tel;
+        $this->phone = $phone;
         return $this;
     }
 
