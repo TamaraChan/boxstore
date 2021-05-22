@@ -26,6 +26,10 @@ authUser:
     methods: POST
     controller: App\Controller\Enter::authUser
 
+logout:
+    path: /logout
+    controller: App\Controller\Enter::logout
+
 registration:
     path: /registration
     methods: GET

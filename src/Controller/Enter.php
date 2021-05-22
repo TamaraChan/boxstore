@@ -7,6 +7,8 @@ use App\Entity\User;
 use App\Service\PasswordEncoder;
 use App\Service\Validator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\VarDumper\VarDumper;
 
@@ -50,7 +52,17 @@ class Enter extends AbstractController
             return $this->redirectToRoute('enter');
         }
 
-        $request->cookies->set('idUser', $user->getIdUser());
-        return $this->redirectToRoute('index');
+
+        $redirect = new RedirectResponse($this->generateUrl('index'));
+        $redirect->headers->setCookie(Cookie::create('idUser', $user->getIdUser()));
+
+        return $redirect->send();
+    }
+
+    public function logout(Request $request)
+    {
+        $redirect = new RedirectResponse($this->generateUrl('enter'));
+        $redirect->headers->clearCookie('idUser');
+        return $redirect->send();
     }
 }

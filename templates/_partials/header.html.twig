@@ -25,10 +25,21 @@
 					</ul>
 				</div>
 			</li>
-			<li class="nav-item item3">
-				<div class="menu-wrapper">
-					<img src="{{ asset('img/forMenuEnter.png') }}" alt="" class="menu-img3">
-					<a href="{{ path('enter') }}">Войти/Зарегестрироваться</a></li>
+			{% if app.request.cookies.get('idUser') %}
+				<li class="nav-item item3">
+					<div class="menu-wrapper">
+						<a href="{{ path('logout') }}">Выйти</a>
+					</div>
+				</li>
+			{% else %}
+				<li class="nav-item item3">
+					<div class="menu-wrapper">
+						<img src="{{ asset('img/forMenuEnter.png') }}" alt="" class="menu-img3">
+						<a href="{{ path('enter') }}">Войти/Зарегестрироваться</a>
+					</div>
+				</li>
+			{% endif %}
+
 	</div>
 	</ul>
 	</div>

@@ -6,7 +6,10 @@ namespace App\Controller;
 use App\Service\PasswordEncoder;
 use App\Service\Validator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\VarDumper\VarDumper;
 use App\Entity\User;
@@ -61,8 +64,10 @@ class Registration extends AbstractController
             return $this->redirectToRoute('registration');
         }
 
-        $request->cookies->set('idUser', $user->getIdUser());
-        return $this->redirectToRoute('index');
+        $redirect = new RedirectResponse($this->generateUrl('index'));
+        $redirect->headers->setCookie(Cookie::create('idUser', $user->getIdUser()));
+
+        return $redirect->send();
     }
 
     /**
