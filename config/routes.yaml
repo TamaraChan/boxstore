@@ -22,6 +22,11 @@ createOrder:
     methods: POST
     controller: App\Controller\OrderBox::createOrder
 
+confirmation:
+    path: /confirmation
+    methods: GET
+    controller: App\Controller\OrderBox::confirmation
+
 enter:
     path: /enter
     methods: GET

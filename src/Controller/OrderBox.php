@@ -86,6 +86,11 @@ class OrderBox extends AbstractController
             return $this->redirectToRoute('orderBox', ['idBox' => (int)$request->get('idBox')]);
         }
 
-        return $this->redirectToRoute('index');
+        return $this->redirectToRoute('confirmation');
+    }
+
+    public function confirmation()
+    {
+        return $this->render('confirmation.html.twig');
     }
 }
