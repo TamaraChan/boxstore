@@ -34,4 +34,48 @@ class Box
      * @ORM\Column(name="price", type="float")
      */
     protected $price;
+
+    /**
+     * @return int
+     */
+    public function getIdBox()
+    {
+        return $this->idBox;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return Box
+     */
+    public function setName(string $name): Box
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrice(): float
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param float $price
+     * @return Box
+     */
+    public function setPrice(float $price): Box
+    {
+        $this->price = $price;
+        return $this;
+    }
 }

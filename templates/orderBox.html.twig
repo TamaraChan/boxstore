@@ -8,12 +8,23 @@
 		<div class="container">
 			<h1>Оформление заказа</h1>
 			<p>* Через некоторое время после отправления заявки с Вами свяжется наш менеджер</p>
-			<form action="#" class="form">
+			<div>
+				{% if errors is defined %}
+					{% for error in errors %}
+						<div class="alert alert-danger">{{ error }}</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+			<form action="{{ path('createOrder') }}" class="form" method="POST">
 				<input type="hidden" name="idBox" value="{{ idBox }}">
-				<input type="name" placeholder="Имя" name="name" class="input" required>
-				<input type="email" placeholder="E-mail" name="email" class="input" required>
-				<input type="phone" placeholder="Телефон" name="phone" class="input" required>
-				<input type="address" placeholder="Адрес" name="address" class="input">
+
+				{% if app.request.cookies.get('idUser') == false %}
+					<input type="name" placeholder="Имя" name="name" class="input" required>
+					<input type="email" placeholder="E-mail" name="email" class="input" required>
+					<input type="phone" placeholder="Телефон" name="phone" class="input" required>
+					<input type="address" placeholder="Адрес" name="address" class="input">
+				{% endif %}
+
 				<input type="place" placeholder="Комментарий" name="comment" class="input">
 				<button class="btn btn-form">Отправить заявку</button>
 			</form>

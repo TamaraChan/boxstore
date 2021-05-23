@@ -13,8 +13,14 @@ madeByYourOwn:
 orderBox:
     path: /orderBox/{idBox}
     controller: App\Controller\OrderBox::index
+    methods: GET
     requirements:
         idBox: '\d+'
+
+createOrder:
+    path: /orderBox
+    methods: POST
+    controller: App\Controller\OrderBox::createOrder
 
 enter:
     path: /enter

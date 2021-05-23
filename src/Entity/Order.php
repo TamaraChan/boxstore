@@ -7,10 +7,12 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="order")
+ * @ORM\Table(name="orders")
  */
 class Order
 {
+    const DATE_FORMAT = 'Y-m-d H:i:s';
+
     /**
      * @var integer
      *

@@ -31,14 +31,14 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="login", type="string", unique=true)
+     * @ORM\Column(name="login", type="string", unique=true, nullable=true)
      */
     protected $login;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string")
+     * @ORM\Column(name="password", type="string", nullable=true)
      */
     protected $password;
 
