@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/needs.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="needs">
+        <div class="container">
+            <h1 class="allNeeds-title">Как воспроизвести оплату?</h1>
+            <p class="afterTitle">После звонка нашего менеджера Вы сможете выбрать наиболее удобный способ оплаты заказа из предложенных:</p>
+            <div class="allNeedsFull" id="allNeedsFull">
+                <div class="allNeeds allNeeds-card">
+                    <p class="needs-text">
+                        Полная оплата на карту
+                    </p>
+                </div>
+                <div class="allNeeds allNeeds-afterGetting">
+                    <p class="needs-text">
+                        Наложенный платеж по предоплате
+                    </p>
+                </div>
+    </section>
+    <section class="delivery">
+        <div class="container">
+            <h1 class="allNeeds-title">Способы доставки</h1>
+            <div class="wrapper">
+                <ul>
+                    <li>Отправка Новой почтой или Укрпочтой в день заказа</li>
+                    <li>Есть самовывоз (находимся в Харькове)</li>
+                    <li>Возможна доставка курьером по Харькову (от 30 грн, цена зависит от адреса)</li>
+                </ul>
+                <img src="{{ asset('img/a.png') }}" alt="" class="waysOfDelivery">
+            </div>
+        </div>
+    </section>
+    <section class="how">
+        <div class="container">
+            <h1 class="allNeeds-title title-how">Как осуществить заказ?</h1>
+            <p class="p-first">
+                Чтобы оставить заявку на покупку любого товара заполните форму и наш менеджер обязательно свяжемся с Вами для подтверждения и дальнейшего оформления заказа. Постоянных клиентов радуем скидками и приятными бонусами! Поспешите зарегистрироваться до первого заказа в нашем магазине и получите от нас небольшой подарок!
+            </p>
+            <p>Для заказа через наш инстаграм или любую другую социальную сеть достаточно будет отправить нам скриншот или ссылку на публикацию с товаром, который Вас заинтересовал в личные сообщения. </p>
+            <p class="p-last">Мы любим наших клиентов - будем рады ответить на все вопросы и учесть Ваши пожелания!
+            </p>
+            <a href="{{ path('boxes') }}" class="btn" id="btn btn-offer btn-choose">Выбрать подарочный бокс</a>
+        </div>
+    </section>
+{% endblock %}
+

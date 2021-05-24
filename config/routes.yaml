@@ -51,3 +51,7 @@ create_user:
     methods: POST
     controller: App\Controller\Registration::createUser
 
+help:
+    path: /needs
+    controller: App\Controller\Help::index
+
